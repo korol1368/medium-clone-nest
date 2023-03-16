@@ -1,10 +1,8 @@
-import { ExpressRequestInterface } from '@app/types/expressRequest.interface';
 import {
   Body,
   Controller,
   Get,
   Post,
-  Req,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
