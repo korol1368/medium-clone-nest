@@ -15,6 +15,10 @@ export class ArticleController {
     @User() currentUser: UserEntity,
     @Body('article') createArticleDto: CreateArticleDto,
   ): Promise<any> {
-    return this.articleService.createArticle(currentUser, createArticleDto);
+    const article = await this.articleService.createArticle(
+      currentUser,
+      createArticleDto,
+    );
+    return this.articleService.buildArticleResponse(article);
   }
 }
