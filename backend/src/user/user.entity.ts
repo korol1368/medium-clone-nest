@@ -7,8 +7,8 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { hash } from 'bcrypt';
-import { ArticleEntity } from '@app/article/article.entity';
+import { hash } from 'bcryptjs';
+import { ArticleEntity } from '../article/article.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {

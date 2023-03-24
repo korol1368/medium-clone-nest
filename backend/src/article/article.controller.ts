@@ -46,7 +46,7 @@ export class ArticleController {
   async create(
     @User() currentUser: UserEntity,
     @Body('article') createArticleDto: CreateArticleDto,
-  ): Promise<any> {
+  ): Promise<ArticleResponseInterface> {
     const article = await this.articleService.createArticle(
       currentUser,
       createArticleDto,
